@@ -6,6 +6,8 @@
     --purple:#320d75;
     --Lpurple:#4B0076;
     --silver:#acaba8;
+    --brown:#996515;
+    --gold:#D4AF37;
   }
   .name {
     text-align: center;
@@ -73,6 +75,19 @@
     align-items: center;
     justify-content: center;
   }
+  .card__face--front--j {
+    background-image: linear-gradient(to bottom right, var(--light), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__face--front--da {
+    background-image: linear-gradient(to bottom right, var(--gold), var(--brown));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .card__face--front h2 {
     color: #FFF;
@@ -95,6 +110,14 @@
   }
 
   .card__header--wisp {
+    position: relative;
+    padding: 30px 30px 40px;
+  }
+  .card__header--j {
+    position: relative;
+    padding: 30px 30px 40px;
+  }
+  .card__header--da {
     position: relative;
     padding: 30px 30px 40px;
   }
@@ -124,6 +147,30 @@
     z-index: -1;
     border-radius: 0px 0px 50% 0px;
   }
+  .card__header--j:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom left, var(--light) 10%, var(--gold) 115%);
+    z-index: -1;
+    border-radius: 0px 0px 50% 0px;
+  }
+  .card__header--da:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom left, var(--gold) 10%, var(--brown) 115%);
+    z-index: -1;
+    border-radius: 0px 0px 50% 0px;
+  }
   
   .pp {
     display: block;
@@ -145,6 +192,20 @@
   }
   /*add for new card*/
   .card__header--wisp h2 {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .card__header--j h2 {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .card__header--da h2 {
     color: #FFF;
     font-size: 32px;
     font-weight: 900;
